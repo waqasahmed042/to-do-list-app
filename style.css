@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.todo-box {
+    min-height: 100vh;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(120deg, purple, crimson);
+}
+
+.todo-header {
+    width: 100%;
+    max-width: 540px;
+    background: #EFF8FC;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-header h2 {
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+#task-count {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+input {
+    width: 200px;
+    border: none;
+    outline: none;
+    padding: 10px 10px 0px 0px;
+    font-weight: 14px;
+    border-bottom: 1px solid black;
+    font-size: medium;
+    background: transparent;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #638bf8;
+    color: white;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 5px;
+    background-image: url(Images/lined-circle-4076.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(Images/green-check-mark-verified-circle-16223.png);
+}
+
+ul li span:first-child {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: white;
+    background-color: #638bf8;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+}
+
+ul li span:last-child {
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    color: white;
+    background-color: #f14040;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+}

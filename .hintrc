@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "button-type": "off",
+    "meta-charset-utf-8": "off",
+    "compat-api/css": "off"
+  }
+}
