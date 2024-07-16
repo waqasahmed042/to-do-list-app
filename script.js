@@ -40,7 +40,7 @@ function addTask() {
 function isDuplicate(taskValue) {
     const items = listSection.getElementsByTagName("li");
     for (let li of items) {
-        if (li.childNodes[0].textContent === taskValue) {
+        if (!li.classList.contains('checked') && li.childNodes[0].textContent === taskValue) {
             return true;
         }
     }
@@ -75,6 +75,8 @@ function editTask(li, taskTextNode) {
 // Function to save task
 function saveTask(editInput, li, taskTextNode) {
     let newTaskText = editInput.value;
+    let isChecked = li.classList.contains('checked'); // Store checked status
+
     // Check for duplicates before saving
     if (isDuplicate(newTaskText)) {
         alert(`Task already exists!`);
@@ -99,6 +101,11 @@ function saveTask(editInput, li, taskTextNode) {
             editTask(li, taskTextNode);
         });
         li.appendChild(editSpan);
+
+        // Restore checked status
+        if (isChecked) {
+            li.classList.add('checked');
+        }
 
         taskCount();
         saveData();
